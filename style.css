@@ -1,3 +1,11 @@
+body {
+    background: url("https://c4.wallpaperflare.com/wallpaper/929/282/382/horizon-minimalism-illustration-artwork-wallpaper-preview.jpg");
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+}
+
 #nav-tab {
   color: aliceblue;
 
@@ -8,22 +16,20 @@
   display: flex;
 }
 img {
-  width: 220px;
+  width: 240px;
   border: 2px solid black;
 }
 #display {
-  background-color: gainsboro;
+  background-color: rgba(169, 206, 228, 0.733);
   text-align: center;
 
   margin-left: 10%;
   margin-right: 15%;
-  
 }
 
 ul {
- 
-
   margin-top: 0%;
 
   padding: 0%, 5%, 2%, 2%;
 }
+
