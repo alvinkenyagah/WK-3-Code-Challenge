@@ -87,11 +87,13 @@ function movie() {
 
             const title = document.createElement("h1");
             const poster = document.createElement("img");
-            const description = document.createElement("h3");
+            const description = document.createElement("p");
             const showTime = document.createElement("h4");
             const runtime = document.createElement("h4");
             const tickets = document.createElement("h4");
             const buy = document.createElement("button");
+
+            buy.classList.add("btn", "btn-success");
 
             title.textContent = movieData[i].title;
             poster.src = movieData[i].poster;
