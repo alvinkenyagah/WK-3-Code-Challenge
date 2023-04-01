@@ -6,26 +6,24 @@ function movie() {
       const movieData = data;
 
       for (let i = 0; i < movieData.length; i++) {
+        let display = document.querySelector("#display");
 
-      let display = document.querySelector("#display");
+        let title = document.createElement("h1");
+        let poster = document.createElement("img");
+        let description = document.createElement("h3");
+        let showTime = document.createElement("h4");
+        let runtime = document.createElement("h4");
+        let tickets = document.createElement("p");
 
-      let title = document.createElement("h1");
-      let poster = document.createElement("img");
-      let description = document.createElement("h3");
-      let showTime = document.createElement("h4");
-      let runtime = document.createElement("h4");
-      let tickets = document.createElement("p");
+        let buy = document.createElement("button");
 
-
-      
-
-      title.textContent = movieData[i].title;
-      poster.src = movieData[i].poster;
-      description.textContent = movieData[i].description;
-      showTime.textContent = movieData[i].showTime;
-      runtime.textContent = `Duration: ${movieData[i].runtime} minutes`;
-      tickets.textContent = `Tickets sold: ${movieData[i].tickets_sold}`;
-
+        title.textContent = movieData[i].title;
+        poster.src = movieData[i].poster;
+        description.textContent = movieData[i].description;
+        showTime.textContent = `Movie starts at : ${movieData[i].showtime}`;
+        runtime.textContent = `Duration: ${movieData[i].runtime} minutes`;
+        tickets.textContent = `Tickets sold: ${movieData[i].tickets_sold} `;
+        buy.textContent = `BUY TICKET`
         display.appendChild(title);
 
         display.appendChild(poster);
@@ -33,8 +31,8 @@ function movie() {
         display.appendChild(showTime);
         display.appendChild(runtime);
         display.appendChild(tickets);
+        display.appendChild(buy);
       }
-      
     })
-    .catch((err) => console.log(err)); 
+    .catch((err) => console.log(err));
 }
